@@ -177,7 +177,6 @@ def run_experiment(exp_cfg):
         if (step % CHECKPOINT_EVERY) == 0 and step > 0:
             save_ckpt(exp_cfg["name"], step, model, optimizer)
 
-        # Validation
         if step % VALIDATE_EVERY == 0:
             model.eval()
             with torch.no_grad():

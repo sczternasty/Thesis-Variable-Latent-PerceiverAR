@@ -9,7 +9,6 @@ import tqdm
 import math
 import numpy as np
 
-# Import your custom modules
 from PerceiverAR import PerceiverAR
 from Transformer import Transformer
 from Utils import enwik8, sample_batch
@@ -235,7 +234,6 @@ def main():
         df.to_csv("evaluation_results.csv", index=False)
         print(f"\nSaved {len(results)} results to evaluation_results.csv")
 
-        # Print summary
         print("\nSummary of results:")
         print(df.groupby('model')[['bpb', 'perplexity', 'peak_mem_gb']].agg(['mean', 'min', 'max']))
     else:
