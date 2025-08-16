@@ -94,13 +94,6 @@ This work contributes to the field of efficient sequence modeling by:
 
 ## Citation
 
-```bibtex
-@article{hawthorne2022perceiver_ar,
-  title={General-purpose, long-context autoregressive modeling with Perceiver AR},
-  author={Hawthorne, Curtis and Jaegle, Andrew and Cangea, C{\u{a}}t{\u{a}}lina and Borgeaud, Sebastian and Nash, Charlie and Malinowski, Mateusz and Dieleman, Sander and Vinyals, Oriol and Botvinick, Matthew and Simon, Ian and Sheahan, Hannah and Zeghidour, Neil and Alayrac, Jean-Baptiste and Carreira, Jo{\~a}o and Engel, Jesse},
-  journal={arXiv preprint arXiv:2202.07765},
-  year={2022},
-  url={https://arxiv.org/abs/2202.07765}
-}
+- Jaegle, A., Borgeaud, S., Alayrac, J. B., Doersch, C., Ionescu, C., Ding, D., et al. (2021). *Perceiver IO: A general architecture for structured inputs & outputs*. NeurIPS. [arXiv:2107.14795](https://arxiv.org/abs/2107.14795)
 
-```
+- Hawthorne, C., Jaegle, A., Cangea, C., Borgeaud, S., Nash, C., Malinowski, M., et al. (2022). *General-purpose, long-context autoregressive modeling with Perceiver AR*. arXiv. [arXiv:2202.07765](https://arxiv.org/abs/2202.07765)
