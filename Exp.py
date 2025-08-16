@@ -89,7 +89,7 @@ def main():
                 "heads": 8,
                 "num_layers": 8
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\Transformer_256_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/Transformer_256_stepfinal.pt"
         },
         {
             "name": "TX-512",
@@ -102,7 +102,7 @@ def main():
                 "heads": 8,
                 "num_layers": 8
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\Transformer_512_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/Transformer_512_stepfinal.pt"
         },
         {
             "name": "PAR-256",
@@ -116,7 +116,7 @@ def main():
                 "perceive_depth": 1,
                 "dropout": 0.1
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\fixed_prefix_256_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/fixed_prefix_256_stepfinal.pt"
         },
         {
             "name": "PAR-512",
@@ -130,7 +130,7 @@ def main():
                 "perceive_depth": 1,
                 "dropout": 0.1
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\fixed_prefix_512_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/fixed_prefix_512_stepfinal.pt"
         },
         {
             "name": "VL-Uniform",
@@ -144,7 +144,7 @@ def main():
                 "perceive_depth": 1,
                 "dropout": 0.1
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\variable_uniform_64_512_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/variable_uniform_64_512_stepfinal.pt"
         },
         {
             "name": "VL-Curriculum",
@@ -158,7 +158,7 @@ def main():
                 "perceive_depth": 1,
                 "dropout": 0.1
             },
-            "checkpoint_path": r"S:\PycharmProjects\Transformer-from-scratches\checkpoints_2.0\curriculum_64_to_512_stepfinal.pt"
+            "checkpoint_path": "./checkpoints/curriculum_64_to_512_stepfinal.pt"
         }
     ]
 

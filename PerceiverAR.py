@@ -1,3 +1,5 @@
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -80,7 +82,7 @@ class CrossAttention(nn.Module):
         attn = self.dropout(attn)
 
         out = torch.bmm(attn, v).view(B, H, T_x, S)
-        out = out.transpose(1, 2).contiguous().view(B, T_x, C)
+        out = out.transpose(1, 2).contiguous().view(B, T_x, S)
 
         return self.out(out)
 
@@ -149,11 +151,8 @@ class PerceiverAR(nn.Module):
         input_seq = x
 
         for _ in range(self.perceive_depth):
-
             n = x[:, -cross_seq_len:]
-
             cross_attended = self.cross_attn(n, input_seq, mask)
-
             ff_out = self.perceiver_ff(x[:, -cross_seq_len:] + cross_attended)
 
             x_new = x.clone()
@@ -164,5 +163,4 @@ class PerceiverAR(nn.Module):
             x = transformer_layer(x)
 
         logits = self.to_logits(x)
-
         return F.log_softmax(logits, dim=2)

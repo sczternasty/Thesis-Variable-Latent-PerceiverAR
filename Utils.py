@@ -56,14 +56,11 @@ def sample_sequence(model, seed, cross_seq_len, max_context, length=600, temp=0.
             else:
                 output = model(X.unsqueeze(0))
 
-
             c = sample(output[0, -1, :], temp)
-
 
             print(str(chr(max(32, c))), end='', flush=True)
 
             seq = torch.cat([seq, c], dim=0)
-
 
     print()
     return seq[-length:].detach().cpu()

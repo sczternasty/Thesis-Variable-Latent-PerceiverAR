@@ -32,7 +32,7 @@ class SelfAttention(nn.Module):
         q = q.transpose(1, 2).contiguous().view(B * H, T, S)
         v = v.transpose(1, 2).contiguous().view(B * H, T, S)
 
-        dot = torch.bmm(q, k.transpose(1, 2))  # B * H, T, S) @ (B * H, S, T) -> (B * H, T, T)
+        dot = torch.bmm(q, k.transpose(1, 2))
 
         dot = dot / math.sqrt(S)
 
@@ -44,7 +44,7 @@ class SelfAttention(nn.Module):
         dot = self.dropout(dot)
         out = torch.bmm(dot, v).view(B, H, T, S)
 
-        out = out.transpose(1, 2).contiguous().view(B, T, S * H)  # (B, H, T, S) -> (B, T, S * H) -> (B, T, C)
+        out = out.transpose(1, 2).contiguous().view(B, T, S * H)
 
         out = self.unify_heads(out)
         return out

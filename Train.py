@@ -49,7 +49,7 @@ experiments = [
 ]
 
 CHECKPOINT_EVERY = 1_000
-CKPT_DIR = "./checkpoints_2.0"
+CKPT_DIR = "./checkpoints"
 os.makedirs(CKPT_DIR, exist_ok=True)
 
 
@@ -64,7 +64,6 @@ def save_ckpt(run_name, step, model, optimizer):
 
 
 def compute_loss(model, X, y, cross_seq_len, device):
-
     X = X.to(device)
     y = y.to(device)
 
